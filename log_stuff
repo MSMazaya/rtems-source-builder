@@ -1,0 +1,481 @@
+RTEMS Source Builder - Set Builder, 6 (8e568b2ca348)
+ Command Line: ./source-builder/sb-set-builder --prefix=~/Documents/testing-stuff/rtems-stuff --log=log_stuff --trace --bset-tar-file --no-install dtc
+ Python: 3.10.6 (main, May 29 2023, 11:10:38) [GCC 11.3.0]
+--- check host set up : start"
+   ___setup_shell: ('exe', 'required', '/bin/sh') -> "/bin/sh"
+        __aclocal: ('exe', 'optional', 'aclocal') -> "aclocal"
+             __ar: ('exe', 'required', 'ar') -> "ar"
+  __arch_install_post: ('exe', 'none', '%{nil}') -> ""
+             __as: ('exe', 'required', 'as') -> "as"
+       __autoconf: ('exe', 'optional', 'autoconf') -> "autoconf"
+     __autoheader: ('exe', 'optional', 'autoheader') -> "autoheader"
+       __automake: ('exe', 'optional', 'automake') -> "automake"
+     __autoreconf: ('exe', 'optional', 'autoreconf') -> "autoreconf"
+            __awk: ('exe', 'required', 'awk') -> "awk"
+           __bash: ('exe', 'optional', '/bin/bash') -> "/bin/bash"
+          __bison: ('exe', 'required', '/usr/bin/bison') -> "/usr/bin/bison"
+          __bzip2: ('exe', 'required', '/bin/bzip2') -> "/bin/bzip2"
+            __cat: ('exe', 'required', '/bin/cat') -> "/bin/cat"
+             __cc: ('exe', 'required', 'gcc') -> "gcc"
+          __chgrp: ('exe', 'required', '/bin/chgrp') -> "/bin/chgrp"
+          __chmod: ('exe', 'required', '/bin/chmod') -> "/bin/chmod"
+          __chown: ('exe', 'required', '/bin/chown') -> "/bin/chown"
+          __cmake: ('exe', 'optional', '/usr/bin/cmake') -> "/usr/bin/cmake"
+             __cp: ('exe', 'required', '/bin/cp') -> "/bin/cp"
+            __cpp: ('exe', 'none', '%{__cc} -E') -> "gcc -E"
+warning: exe: optional exe not found: (__cvs) /usr/bin/cvs
+            __cvs: ('exe', 'optional', '/usr/bin/cvs') -> "/usr/bin/cvs"
+            __cxx: ('exe', 'required', 'g++') -> "g++"
+           __flex: ('exe', 'required', '/usr/bin/flex') -> "/usr/bin/flex"
+            __git: ('exe', 'required', '/usr/bin/git') -> "/usr/bin/git"
+           __grep: ('exe', 'required', '/bin/grep') -> "/bin/grep"
+           __gzip: ('exe', 'required', '/bin/gzip') -> "/bin/gzip"
+             __id: ('exe', 'required', '/usr/bin/id') -> "/usr/bin/id"
+           __id_u: ('exe', 'none', '%{__id} -u') -> "/usr/bin/id -u"
+        __install: ('exe', 'required', '/usr/bin/install') -> "/usr/bin/install"
+   __install_info: ('exe', 'optional', '/usr/bin/install-info') -> "/usr/bin/install-info"
+             __ld: ('exe', 'required', '/usr/bin/ld') -> "/usr/bin/ld"
+       __ldconfig: ('exe', 'required', '/sbin/ldconfig') -> "/sbin/ldconfig"
+           __ln_s: ('exe', 'none', 'ln -s') -> "ln -s"
+           __make: ('exe', 'required', 'make') -> "make"
+       __makeinfo: ('exe', 'optional', '/usr/bin/makeinfo') -> "/usr/bin/makeinfo"
+          __mkdir: ('exe', 'required', '/bin/mkdir') -> "/bin/mkdir"
+        __mkdir_p: ('exe', 'none', '/bin/mkdir -p') -> "/bin/mkdir -p"
+             __mv: ('exe', 'required', '/bin/mv') -> "/bin/mv"
+             __nm: ('exe', 'required', '/usr/bin/nm') -> "/usr/bin/nm"
+        __objcopy: ('exe', 'none', '/usr/bin/objcopy') -> "/usr/bin/objcopy"
+        __objdump: ('exe', 'none', '/usr/bin/objdump') -> "/usr/bin/objdump"
+          __patch: ('exe', 'none', '%{__patch_bin} %{__patch_opts}') -> "/usr/bin/patch "
+      __patch_bin: ('exe', 'required', '/usr/bin/patch') -> "/usr/bin/patch"
+           __perl: ('exe', 'optional', 'perl') -> "perl"
+         __ranlib: ('exe', 'required', 'ranlib') -> "ranlib"
+             __rm: ('exe', 'required', '/bin/rm') -> "/bin/rm"
+          __rmdir: ('exe', 'none', '%{__rm} -rf') -> "/bin/rm -rf"
+         __rmfile: ('exe', 'none', '%{__rm} -f') -> "/bin/rm -f"
+            __sed: ('exe', 'required', '/bin/sed') -> "/bin/sed"
+     __setup_post: ('exe', 'none', '%{__chmod} -R a+rX,g-w,o-w .') -> "/bin/chmod -R a+rX,g-w,o-w ."
+             __sh: ('exe', 'required', '/bin/sh') -> "/bin/sh"
+            __tar: ('exe', 'required', '/bin/tar') -> "/bin/tar"
+    __tar_extract: ('exe', 'none', '%{__tar} -xvv') -> "/bin/tar -xvv"
+          __touch: ('exe', 'required', '/usr/bin/touch') -> "/usr/bin/touch"
+          __unzip: ('exe', 'required', '/usr/bin/unzip') -> "/usr/bin/unzip"
+             __xz: ('exe', 'required', '/usr/bin/xz') -> "/usr/bin/xz"
+          _bindir: ('dir', 'none', '%{_exec_prefix}/bin') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/bin"
+           _build: ('triplet', 'required', 'x86_64-linux-gnu') -> "x86_64-linux-gnu"
+     _buildcxcdir: ('dir', 'optional', '%{_topdir}/build/%{buildname}-cxc') -> "/home/mazaya/quick-start/src/rsb/build/-cxc"
+        _builddir: ('dir', 'optional', '%{_topdir}/build/%{buildname}') -> "/home/mazaya/quick-start/src/rsb/build/"
+      _buildxcdir: ('dir', 'optional', '%{_topdir}/build/%{buildname}-xc') -> "/home/mazaya/quick-start/src/rsb/build/-xc"
+       _configdir: ('dir', 'optional', '%{_topdir}/config:%{_sbdir}/config:%{_sbtop}/bare/config:%{_sbtop}/rtems/config') -> "/home/mazaya/quick-start/src/rsb/config:/home/mazaya/quick-start/src/rsb/source-builder/config:/home/mazaya/quick-start/src/rsb/bare/config:/home/mazaya/quick-start/src/rsb/rtems/config"
+             _cwd: ('dir', 'required', '/home/mazaya/quick-start/src/rsb') -> "/home/mazaya/quick-start/src/rsb"
+         _datadir: ('dir', 'none', '%{_datarootdir}') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/share"
+     _datarootdir: ('dir', 'none', '%{_prefix}/share') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/share"
+   _defaultdocdir: ('dir', 'none', '%{_prefix}/share/doc') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/share/doc"
+          _docdir: ('dir', 'none', '%{_defaultdocdir}') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/share/doc"
+     _exec_prefix: ('dir', 'none', '%{_prefix}') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff"
+            _host: ('triplet', 'required', 'x86_64-linux-gnu') -> "x86_64-linux-gnu"
+      _includedir: ('dir', 'none', '%{_prefix}/include') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/include"
+         _infodir: ('dir', 'none', '%{_datarootdir}/info') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/share/info"
+             _lib: ('dir', 'none', 'lib') -> "lib"
+          _libdir: ('dir', 'none', '%{_exec_prefix}/%{_lib}') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/lib"
+      _libexecdir: ('dir', 'none', '%{_exec_prefix}/libexec') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/libexec"
+       _localedir: ('dir', 'none', '%{_datadir}/locale') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/share/locale"
+   _localstatedir: ('dir', 'none', '%{_prefix}/var') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/var"
+          _mandir: ('dir', 'none', '%{_datarootdir}/man') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/share/man"
+        _patchdir: ('dir', 'optional', '%{_topdir}/patches:%{_sbdir}/patches') -> "/home/mazaya/quick-start/src/rsb/patches:/home/mazaya/quick-start/src/rsb/source-builder/patches"
+           _sbdir: ('dir', 'required', '/home/mazaya/quick-start/src/rsb/source-builder') -> "/home/mazaya/quick-start/src/rsb/source-builder"
+         _sbindir: ('dir', 'none', '%{_exec_prefix}/sbin') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/sbin"
+           _sbtop: ('dir', 'required', '/home/mazaya/quick-start/src/rsb') -> "/home/mazaya/quick-start/src/rsb"
+  _sharedstatedir: ('dir', 'none', '%{_prefix}/com') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/com"
+       _sourcedir: ('dir', 'optional', '%{_topdir}/sources') -> "/home/mazaya/quick-start/src/rsb/sources"
+      _sysconfdir: ('dir', 'none', '%{_prefix}/etc') -> "/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff/etc"
+          _tardir: ('dir', 'optional', '%{_topdir}/tar') -> "/home/mazaya/quick-start/src/rsb/tar"
+      _tmpcxcroot: ('dir', 'none', '%{_tmppath}/sb-%{_uid}-cxc/%{_bset_tmp}') -> "/home/mazaya/quick-start/src/rsb/build/tmp/sb-%(/usr/bin/id -u)-cxc/"
+     _tmpinternal: ('dir', 'none', '%{_tmppath}/sb-%{_uid}-internal') -> "/home/mazaya/quick-start/src/rsb/build/tmp/sb-%(/usr/bin/id -u)-internal"
+         _tmppath: ('dir', 'none', '%{_topdir}/build/tmp') -> "/home/mazaya/quick-start/src/rsb/build/tmp"
+         _tmproot: ('dir', 'none', '%{_tmppath}/sb-%{_uid}/%{_bset_tmp}') -> "/home/mazaya/quick-start/src/rsb/build/tmp/sb-%(/usr/bin/id -u)/"
+          _topdir: ('dir', 'required', '%{_cwd}') -> "/home/mazaya/quick-start/src/rsb"
+             _usr: ('dir', 'required', '/usr') -> "/usr"
+          _usrsrc: ('dir', 'none', '%{_usr}/src') -> "/usr/src"
+             _var: ('dir', 'required', '/var') -> "/var"
+          _varrun: ('dir', 'none', '%{_var}/run') -> "/var/run"
+     buildcxcroot: ('dir', 'none', '%{_tmppath}/%{buildname}-%{_uid}-cxc') -> "/home/mazaya/quick-start/src/rsb/build/tmp/-%(/usr/bin/id -u)-cxc"
+        buildroot: ('dir', 'none', '%{_tmppath}/%{buildname}-%{_uid}') -> "/home/mazaya/quick-start/src/rsb/build/tmp/-%(/usr/bin/id -u)"
+      buildxcroot: ('dir', 'none', '%{_tmppath}/%{buildname}-%{_uid}-xx') -> "/home/mazaya/quick-start/src/rsb/build/tmp/-%(/usr/bin/id -u)-xx"
+      stagingroot: ('dir', 'none', '%{_tmppath}/sb-%{_uid}-staging') -> "/home/mazaya/quick-start/src/rsb/build/tmp/sb-%(/usr/bin/id -u)-staging"
+--- check host set up : end"
+_bset:   : dtc: init
+_bset:   : dtc: macro defaults
+[global]
+ ___build_args:        'none'     'none'      '-e'
+ ___build_cmd:         'none'     'none'      '%{?_sudo:%{_sudo} }%{?_remsh:%{_remsh} %{_remhost} }%{?_remsudo:%{_remsudo} }%{? \
+                                              _remchroot:%{_remchroot} %{_remroot} }%{___build_shell} %{___build_args}'
+ ___build_post:        'none'     'none'      'exit 0'
+ ___build_pre:         'none'     'none'      '''# ___build_pre as set up in defaults.py
+                                              # Save the original path away.
+                                              export SB_ORIG_PATH=${PATH}
+                                              # Directories
+                                              %{?_prefix:SB_PREFIX="%{_prefix}"}
+                                              %{?_prefix:SB_PREFIX_CLEAN=$(echo "%{_prefix}" | %{__sed} -e 's/^\///')}
+                                              SB_SOURCE_DIR="%{_sourcedir}"
+                                              SB_BUILD_DIR="%{_builddir}"
+                                              # host == build, use build; host != build, host uses host and build uses build
+                                              SB_HOST_CPPFLAGS="%{host_includes}"
+                                              # Optionally do not add includes to c/cxx flags as newer configure's complain
+                                              SB_HOST_CFLAGS="%{host_cflags} %{!?host_cflags_no_includes %{host_includes}}"
+                                              SB_HOST_CXXFLAGS="%{host_cxxflags} %{!?host_cflags_no_includes %{host_includes}} \
+                                              "
+                                              SB_HOST_LDFLAGS="%{host_ldflags} %{?_tmproot:-L%{_tmproot}/${SB_PREFIX_CLEAN}/li \
+                                              b}"
+                                              SB_HOST_LIBS="%{host_libs}"
+                                              SB_BUILD_CFLAGS="%{build_cflags} %{?_tmproot:-I%{_tmproot}/${SB_PREFIX_CLEAN}/in \
+                                              clude}"
+                                              SB_BUILD_CXXFLAGS="%{build_cxxflags} %{?_tmproot:-I%{_tmproot}/${SB_PREFIX_CLEAN \
+                                              }/include}"
+                                              SB_BUILD_LDFLAGS="%{build_ldflags} %{?_tmproot:-L%{_tmproot}/${SB_PREFIX_CLEAN}/ \
+                                              lib}"
+                                              SB_BUILD_LBS="%{build_libs}"
+                                              SB_CFLAGS="${SB_BUILD_CFLAGS} %{build_includes}"
+                                              SB_CXXFLAGS="${SB_BUILD_CXXFLAGS} %{build_includes}"
+                                              SB_ARCH="%{_arch}"
+                                              SB_OS="%{_os}"
+                                              export SB_SOURCE_DIR SB_BUILD_DIR SB_ARCH SB_OS
+                                              export SB_HOST_CPPFLAGS SB_HOST_CFLAGS SB_HOST_CXXFLAGS SB_HOST_LDFLAGS SB_HOST_ \
+                                              LIBS
+                                              export SB_BUILD_CFLAGS SB_BUILD_CXXFLAGS SB_BUILD_LDFLAGS SB_BUILD_LIBS
+                                              export SB_CFLAGS SB_CXXFLAGS
+                                              # Documentation
+                                              SB_DOC_DIR="%{_docdir}"
+                                              export SB_DOC_DIR
+                                              # Packages
+                                              SB_PACKAGE_NAME="%{name}"
+                                              SB_PACKAGE_BUILDNAME="%{buildname}"
+                                              SB_PACKAGE_VERSION="%{version}"
+                                              SB_PACKAGE_RELEASE="%{release}"
+                                              export SB_PACKAGE_NAME SB_PACKAGE_VERSION SB_PACKAGE_RELEASE
+                                              # Build directories
+                                              export SB_PREFIX
+                                              %{?_builddir:SB_BUILD_DIR="%{_builddir}"}
+                                              %{?buildroot:SB_BUILD_ROOT="%{buildroot}"}
+                                              %{?buildroot:%{?_prefix:SB_BUILD_ROOT_BINDIR="%{buildroot}/${SB_PREFIX_CLEAN}/bi \
+                                              n"}}
+                                              export SB_BUILD_ROOT SB_BUILD_DIR SB_BUILD_ROOT_BINDIR
+                                              %{?_buildcxcdir:SB_BUILD_CXC_DIR="%{_buildcxcdir}"}
+                                              %{?buildcxcroot:SB_BUILD_CXC_ROOT="%{buildcxcroot}"}
+                                              %{?buildcxcroot:%{?_prefix:SB_BUILD_CXC_ROOT_BINDIR="%{buildcxcroot}/${SB_PREFIX \
+                                              _CLEAN}/bin"}}
+                                              export SB_BUILD_CXC_ROOT SB_BUILD_CXC_DIR SB_BUILD_CXC_ROOT_BINDIR
+                                              %{?_tmproot:SB_TMPROOT="%{_tmproot}"}
+                                              %{?_tmproot:%{?_prefix:SB_TMPPREFIX="%{_tmproot}/${SB_PREFIX_CLEAN}"}}
+                                              %{?_tmproot:%{?_prefix:SB_TMPBINDIR="%{_tmproot}/${SB_PREFIX_CLEAN}/bin"}}
+                                              export SB_TMPROOT SB_TMPPREFIX SB_TMPBINDIR
+                                              %{?_tmpcxcroot:SB_TMPCXCROOT="%{_tmproot}"}
+                                              %{?_tmpcxcroot:%{?_prefix:SB_TMPCXCPREFIX="%{_tmpcxcroot}/${SB_PREFIX_CLEAN}"}}
+                                              %{?_tmpcxcroot:%{?_prefix:SB_TMPCXCBINDIR="%{_tmpcxcroot}/${SB_PREFIX_CLEAN}/bin \
+                                              "}}
+                                              export SB_TMPCXCROOT SB_TMPCXCPREFIX SB_TMPCXCBINDIR
+                                              # Extra path support
+                                              %{?_extra_path:SB_EXTRAPATH="%{_extra_path}"}
+                                              # The compiler flags
+                                              %{?_targetcflags:CFLAGS_FOR_TARGET="%{_targetcflags}"}
+                                              %{?_targetcxxflags:CXXFLAGS_FOR_TARGET="%{_targetcxxflags}"}
+                                              export CFLAGS_FOR_TARGET
+                                              export CXXFLAGS_FOR_TARGET
+                                              # Set up the path. Put the CXC path first.
+                                              if test -n "${SB_TMPBINDIR}" ; then
+                                               PATH="${SB_TMPBINDIR}:$PATH"
+                                              fi
+                                              if test -n "${SB_TMPCXCBINDIR}" ; then
+                                               PATH="${SB_TMPCXCBINDIR}:$PATH"
+                                              fi
+                                              if test -n "${SB_EXTRAPATH}" ; then
+                                               PATH="${SB_EXTRAPATH}:$PATH"
+                                              fi
+                                              %{?_pathprepend:PATH="%{_pathprepend}:$PATH"}
+                                              %{?_pathpostpend:PATH="$PATH:%{_pathpostpend}"}
+                                              export PATH
+                                              # Default environment set up.
+                                              LANG=C
+                                              export LANG
+                                              unset DISPLAY || :
+                                              umask 022
+                                              cd "%{_builddir}"'''
+ ___build_shell:       'none'     'none'      '%{?_buildshell:%{_buildshell}}%{!?_buildshell:/bin/sh}'
+ ___build_template:    'none'     'none'      '''#!%{___build_shell}
+                                              %{___build_pre}
+                                              %{nil}'''
+ ___setup_shell:       'exe'      'required'  '/bin/sh'
+ __aclocal:            'exe'      'optional'  'aclocal'
+ __ar:                 'exe'      'required'  'ar'
+ __arch_install_post:  'exe'      'none'      '%{nil}'
+ __as:                 'exe'      'required'  'as'
+ __autoconf:           'exe'      'optional'  'autoconf'
+ __autoheader:         'exe'      'optional'  'autoheader'
+ __automake:           'exe'      'optional'  'automake'
+ __autoreconf:         'exe'      'optional'  'autoreconf'
+ __awk:                'exe'      'required'  'awk'
+ __bash:               'exe'      'optional'  '/bin/bash'
+ __bison:              'exe'      'required'  '/usr/bin/bison'
+ __bzip2:              'exe'      'required'  '/bin/bzip2'
+ __cat:                'exe'      'required'  '/bin/cat'
+ __cc:                 'exe'      'required'  'gcc'
+ __chgrp:              'exe'      'required'  '/bin/chgrp'
+ __chmod:              'exe'      'required'  '/bin/chmod'
+ __chown:              'exe'      'required'  '/bin/chown'
+ __cmake:              'exe'      'optional'  '/usr/bin/cmake'
+ __cp:                 'exe'      'required'  '/bin/cp'
+ __cpp:                'exe'      'none'      '%{__cc} -E'
+ __cvs:                'exe'      'optional'  '/usr/bin/cvs'
+ __cvs_z:              'none'     'none'      '%{__cvs} -z 9'
+ __cxx:                'exe'      'required'  'g++'
+ __flex:               'exe'      'required'  '/usr/bin/flex'
+ __git:                'exe'      'required'  '/usr/bin/git'
+ __grep:               'exe'      'required'  '/bin/grep'
+ __gzip:               'exe'      'required'  '/bin/gzip'
+ __id:                 'exe'      'required'  '/usr/bin/id'
+ __id_u:               'exe'      'none'      '%{__id} -u'
+ __install:            'exe'      'required'  '/usr/bin/install'
+ __install_info:       'exe'      'optional'  '/usr/bin/install-info'
+ __ld:                 'exe'      'required'  '/usr/bin/ld'
+ __ldconfig:           'exe'      'required'  '/sbin/ldconfig'
+ __ln_s:               'exe'      'none'      'ln -s'
+ __make:               'exe'      'required'  'make'
+ __makeinfo:           'exe'      'optional'  '/usr/bin/makeinfo'
+ __mkdir:              'exe'      'required'  '/bin/mkdir'
+ __mkdir_p:            'exe'      'none'      '/bin/mkdir -p'
+ __mv:                 'exe'      'required'  '/bin/mv'
+ __nm:                 'exe'      'required'  '/usr/bin/nm'
+ __objcopy:            'exe'      'none'      '/usr/bin/objcopy'
+ __objdump:            'exe'      'none'      '/usr/bin/objdump'
+ __patch:              'exe'      'none'      '%{__patch_bin} %{__patch_opts}'
+ __patch_bin:          'exe'      'required'  '/usr/bin/patch'
+ __patch_opts:         'none'     'none'      '%{nil}'
+ __perl:               'exe'      'optional'  'perl'
+ __ranlib:             'exe'      'required'  'ranlib'
+ __rm:                 'exe'      'required'  '/bin/rm'
+ __rmdir:              'exe'      'none'      '%{__rm} -rf'
+ __rmfile:             'exe'      'none'      '%{__rm} -f'
+ __sed:                'exe'      'required'  '/bin/sed'
+ __setup_post:         'exe'      'none'      '%{__chmod} -R a+rX,g-w,o-w .'
+ __sh:                 'exe'      'required'  '/bin/sh'
+ __tar:                'exe'      'required'  '/bin/tar'
+ __tar_extract:        'exe'      'none'      '%{__tar} -xvv'
+ __touch:              'exe'      'required'  '/usr/bin/touch'
+ __unzip:              'exe'      'required'  '/usr/bin/unzip'
+ __xz:                 'exe'      'required'  '/usr/bin/xz'
+ _always_clean:        'none'     'none'      '0'
+ _arch:                'none'     'none'      '%{_host_arch}'
+ _bindir:              'dir'      'none'      '%{_exec_prefix}/bin'
+ _bset:                'none'     'none'      ''
+ _bset_tmp:            'none'     'none'      ''
+ _build:               'triplet'  'required'  'x86_64-linux-gnu'
+ _build_alias:         'none'     'none'      '%{nil}'
+ _build_arch:          'none'     'none'      'x86_64'
+ _build_cpu:           'none'     'none'      'x86_64'
+ _build_os:            'none'     'none'      'linux'
+ _build_vendor:        'none'     'none'      'gnu'
+ _buildcxcdir:         'dir'      'optional'  '%{_topdir}/build/%{buildname}-cxc'
+ _builddir:            'dir'      'optional'  '%{_topdir}/build/%{buildname}'
+ _buildxcdir:          'dir'      'optional'  '%{_topdir}/build/%{buildname}-xc'
+ _configdir:           'dir'      'optional'  '%{_topdir}/config:%{_sbdir}/config:%{_sbtop}/bare/config:%{_sbtop}/rtems/config'
+ _cwd:                 'dir'      'required'  '/home/mazaya/quick-start/src/rsb'
+ _datadir:             'dir'      'none'      '%{_datarootdir}'
+ _datarootdir:         'dir'      'none'      '%{_prefix}/share'
+ _defaultdocdir:       'dir'      'none'      '%{_prefix}/share/doc'
+ _disable_download:    'none'     'none'      '0'
+ _docdir:              'dir'      'none'      '%{_defaultdocdir}'
+ _dry_run:             'none'     'none'      '0'
+ _exec_prefix:         'dir'      'none'      '%{_prefix}'
+ _exeext:              'none'     'none'      ''
+ _extra_path:          'none'     'none'      '%{_sbdir}'
+ _force:               'none'     'none'      '0'
+ _forced_static:       'none'     'none'      '-Xlinker -Bstatic ${LIBS_STATIC} -Xlinker -Bdynamic'
+ _host:                'triplet'  'required'  'x86_64-linux-gnu'
+ _host_alias:          'none'     'none'      '%{nil}'
+ _host_arch:           'none'     'none'      'x86_64'
+ _host_cc:             'none'     'none'      'gcc'
+ _host_cpu:            'none'     'none'      'x86_64'
+ _host_cxx:            'none'     'none'      'g++'
+ _host_os:             'none'     'none'      'linux'
+ _host_os_version:     'none'     'none'      '5.19.0-45-generic'
+ _host_platform:       'none'     'none'      '%{_host_cpu}-%{_host_vendor}-%{_host_os}%{?_gnu}'
+ _host_vendor:         'none'     'none'      'gnu'
+ _includedir:          'dir'      'none'      '%{_prefix}/include'
+ _infodir:             'dir'      'none'      '%{_datarootdir}/info'
+ _jobs:                'none'     'none'      'max'
+ _keep_going:          'none'     'none'      '0'
+ _ld_library_path:     'none'     'none'      'LD_LIBRARY_PATH'
+ _lib:                 'dir'      'none'      'lib'
+ _libdir:              'dir'      'none'      '%{_exec_prefix}/%{_lib}'
+ _libexecdir:          'dir'      'none'      '%{_exec_prefix}/libexec'
+ _localedir:           'dir'      'none'      '%{_datadir}/locale'
+ _localstatedir:       'dir'      'none'      '%{_prefix}/var'
+ _logfile:             'none'     'none'      'log_stuff'
+ _mail_smtp_host:      'none'     'none'      'localhost'
+ _mail_tools_to:       'none'     'none'      'build@rtems.org'
+ _mandir:              'dir'      'none'      '%{_datarootdir}/man'
+ _ncpus:               'none'     'none'      '12'
+ _newlib_iconv_encodings: 'none'     'none'      '''big5,cp775,cp850,cp852,cp855,\
+                                              cp866,euc_jp,euc_kr,euc_tw,iso_8859_1,iso_8859_10,iso_8859_11,\
+                                              iso_8859_13,iso_8859_14,iso_8859_15,iso_8859_2,iso_8859_3,\
+                                              iso_8859_4,iso_8859_5,iso_8859_6,iso_8859_7,iso_8859_8,iso_8859_9,\
+                                              iso_ir_111,koi8_r,koi8_ru,koi8_u,koi8_uni,ucs_2,ucs_2_internal,\
+                                              ucs_2be,ucs_2le,ucs_4,ucs_4_internal,ucs_4be,ucs_4le,us_ascii,\
+                                              utf_16,utf_16be,utf_16le,utf_8,win_1250,win_1251,win_1252,\
+                                              win_1253,win_1254,win_1255,win_1256,win_1257,win_1258'''
+ _no_clean:            'none'     'none'      '0'
+ _no_install:          'none'     'none'      '1'
+ _os:                  'none'     'none'      'linux'
+ _patchdir:            'dir'      'optional'  '%{_topdir}/patches:%{_sbdir}/patches'
+ _pathpostpend:        'none'     'none'      ''
+ _pathprepend:         'none'     'none'      '%{_tmpinternal}/bin'
+ _prefix:              'none'     'none'      '/home/mazaya/quick-start/src/rsb/~/Documents/testing-stuff/rtems-stuff'
+ _quiet:               'none'     'none'      '0'
+ _regression:          'none'     'none'      '0'
+ _rsb_getting_source:  'none'     'none'      '0'
+ _sbdir:               'dir'      'required'  '/home/mazaya/quick-start/src/rsb/source-builder'
+ _sbgit_clean:         'none'     'none'      'True'
+ _sbgit_head:          'none'     'none'      '8e568b2ca3489d6bfa48e1d29618ea9b48a5b408'
+ _sbgit_id:            'none'     'none'      '8e568b2ca3489d6bfa48e1d29618ea9b48a5b408'
+ _sbgit_mail:          'none'     'none'      'Muhammad Sulthan Mazaya <msulthanmazaya@gmail.com>'
+ _sbgit_remotes:       'none'     'none'      'git://git.rtems.org/rtems-source-builder.git/origin'
+ _sbgit_valid:         'none'     'none'      '1'
+ _sbindir:             'dir'      'none'      '%{_exec_prefix}/sbin'
+ _sbtop:               'dir'      'required'  '/home/mazaya/quick-start/src/rsb'
+ _sharedstatedir:      'dir'      'none'      '%{_prefix}/com'
+ _smp_mflags:          'none'     'none'      '-j 12'
+ _source_download:     'none'     'none'      '0'
+ _sourcedir:           'dir'      'optional'  '%{_topdir}/sources'
+ _sysconfdir:          'dir'      'none'      '%{_prefix}/etc'
+ _tardir:              'dir'      'optional'  '%{_topdir}/tar'
+ _target:              'none'     'optional'  ''
+ _tmpcxcroot:          'dir'      'none'      '%{_tmppath}/sb-%{_uid}-cxc/%{_bset_tmp}'
+ _tmpinternal:         'dir'      'none'      '%{_tmppath}/sb-%{_uid}-internal'
+ _tmppath:             'dir'      'none'      '%{_topdir}/build/tmp'
+ _tmproot:             'dir'      'none'      '%{_tmppath}/sb-%{_uid}/%{_bset_tmp}'
+ _topdir:              'dir'      'required'  '%{_cwd}'
+ _trace:               'none'     'none'      '1'
+ _uid:                 'none'     'convert'   '%(%{__id_u})'
+ _usr:                 'dir'      'required'  '/usr'
+ _usrsrc:              'dir'      'none'      '%{_usr}/src'
+ _var:                 'dir'      'required'  '/var'
+ _varrun:              'dir'      'none'      '%{_var}/run'
+ _warn_all:            'none'     'none'      '0'
+ build_build_flags:    'none'     'none'      '''# Build and build flags means force build == host
+                                              # gcc is not ready to be compiled with -std=gnu99
+                                              LDFLAGS="${SB_HOST_LDFLAGS}"
+                                              LIBS="${SB_HOST_LIBS}"
+                                              CC=$(echo "%{__cc} ${SB_CFLAGS}" | sed -e 's,-std=gnu99 ,,')
+                                              CXX=$(echo "%{__cxx} ${SB_CXXFLAGS}" | sed -e 's,-std=gnu99 ,,')
+                                              CC_FOR_BUILD=${CC}
+                                              CXX_FOR_BUILD=${CXX}
+                                              export CC CXX CC_FOR_BUILD CXX_FOR_BUILD CFLAGS LDFLAGS LIBS'''
+ build_cflags:         'none'     'convert'   '-O2 -g -pipe'
+ build_cxxflags:       'none'     'convert'   '-O2 -g -pipe'
+ build_directory:      'none'     'none'      '''if test "%{_build}" != "%{_host}" ; then
+                                                # Cross-build (Xc) if no target or the host and target match.
+                                                # Canadian-cross (Cxc) if build, host and target are all different.
+                                                if test -z "%{_target}" -o "%{_host}" == "%{_target}" ; then
+                                                  build_dir="build-xc"
+                                                else
+                                                  build_dir="build-cxc"
+                                                fi
+                                              else
+                                                build_dir="build"
+                                              fi'''
+ build_includes:       'none'     'convert'   ''
+ build_ldflags:        'none'     'convert'   ''
+ build_libs:           'none'     'convert'   ''
+ buildcxcroot:         'dir'      'none'      '%{_tmppath}/%{buildname}-%{_uid}-cxc'
+ buildname:            'none'     'none'      '%{name}'
+ buildroot:            'dir'      'none'      '%{_tmppath}/%{buildname}-%{_uid}'
+ buildxcroot:          'dir'      'none'      '%{_tmppath}/%{buildname}-%{_uid}-xx'
+ configure:            'none'     'none'      '''CFLAGS="${CFLAGS:-${SB_CFLAGS}" ; export CFLAGS ;
+                                              CXXFLAGS="${CXXFLAGS:-${SB_CFLAGS}}" ; export CXXFLAGS ;
+                                              FFLAGS="${FFLAGS:-${SB_CFLAGS}}" ; export FFLAGS ;
+                                              ./configure --build=%{_build} --host=%{_host} \
+                                                    --target=%{_target_platform} \
+                                                    --program-prefix=%{?_program_prefix} \
+                                                    --prefix=%{_prefix} \
+                                                    --exec-prefix=%{_exec_prefix} \
+                                                    --bindir=%{_bindir} \
+                                                    --sbindir=%{_sbindir} \
+                                                    --sysconfdir=%{_sysconfdir} \
+                                                    --datadir=%{_datadir} \
+                                                    --includedir=%{_includedir} \
+                                                    --libdir=%{_libdir} \
+                                                    --libexecdir=%{_libexecdir} \
+                                                    --localstatedir=%{_localstatedir} \
+                                                    --sharedstatedir=%{_sharedstatedir} \
+                                                    --mandir=%{_mandir} \
+                                                    --infodir=%{_infodir}'''
+ host_build_flags:     'none'     'none'      '''# Host and build flags, Cross build if host and build are different and
+                                              # Cxc build if target is deifned and also different.
+                                              # Note, gcc is not ready to be compiled with -std=gnu99 (this needs to be checke \
+                                              d).
+                                              if test "%{_build}" != "%{_host}" ; then
+                                                # Cross build
+                                                CC=$(echo "%{_host}-%{_host_cc}" | sed -e 's,-std=gnu99 ,,')
+                                                CXX=$(echo "%{_host}-%{_host_cxx}" | sed -e 's,-std=gnu99 ,,')
+                                                CPPFLAGS="${SB_HOST_CPPFLAGS}"
+                                                CFLAGS="${SB_HOST_CFLAGS}"
+                                                CXXFLAGS="${SB_HOST_CXXFLAGS}"
+                                                LDFLAGS="${SB_HOST_LDFLAGS}"
+                                                LDLIBS="${SB_HOST_LIBS}"
+                                                LIBS="${SB_HOST_LIBS}"
+                                                # Host
+                                                CPPFLAGS_FOR_HOST="${SB_HOST_CPPFLAGS}"
+                                                CFLAGS_FOR_HOST="${SB_HOST_CFLAGS}"
+                                                CXXFLAGS_FOR_HOST="${SB_HOST_CXXFLAGS}"
+                                                LDFLAGS_FOR_HOST="${SB_HOST_LDFLAGS}"
+                                                LDLIBS_FOR_HOST="${SB_HOST_LIBS}"
+                                                LIBS_FOR_HOST="${SB_HOST_LIBS}"
+                                                CXXFLAGS_FOR_HOST="${SB_HOST_CFLAGS}"
+                                                CC_FOR_HOST=$(echo "%{_host_cc} ${SB_HOST_CFLAGS}" | sed -e 's,-std=gnu99 ,,')
+                                                CXX_FOR_HOST=$(echo "%{_host_cxx} ${SB_HOST_CXXFLAGS}" | sed -e 's,-std=gnu99  \
+                                              ,,')
+                                                # Build
+                                                CFLAGS_FOR_BUILD="${SB_BUILD_CFLAGS}"
+                                                CXXFLAGS_FOR_BUILD="${SB_BUILD_CXXFLAGS}"
+                                                LDFLAGS_FOR_BUILD="${SB_BUILD_LDFLAGS}"
+                                                LDLIBS_FOR_BUILD="${SB_BUILD_LIBS}"
+                                                LIBS_FOR_BUILD="${SB_BUILD_LIBS}"
+                                                CXXFLAGS_FOR_BUILD="${SB_BUILD_CFLAGS}"
+                                                CC_FOR_BUILD=$(echo "%{__cc} ${SB_BUILD_CFLAGS}" | sed -e 's,-std=gnu99 ,,')
+                                                CXX_FOR_BUILD=$(echo "%{__cxx} ${SB_BUILD_CXXFLAGS}" | sed -e 's,-std=gnu99 ,, \
+                                              ')
+                                              else
+                                                LDFLAGS="${SB_BUILD_LDFLAGS}"
+                                                LDLIBS="${SB_BUILD_LIBS}"
+                                                LIBS="${SB_BUILD_LIBS}"
+                                                CC=$(echo "%{__cc} ${SB_BUILD_CFLAGS}" | sed -e 's,-std=gnu99 ,,')
+                                                CXX=$(echo "%{__cxx} ${SB_BUILD_CXXFLAGS}" | sed -e 's,-std=gnu99 ,,')
+                                                CC_FOR_BUILD=${CC}
+                                                CXX_FOR_BUILD=${CXX}
+                                              fi
+                                              export CC CXX CPPFLAGS CFLAGS CXXFLAGS LDFLAGS LIBS LDLIBS
+                                              export CC_FOR_HOST CXX_FOR_HOST CPPFLAGS_FOR_HOST CFLAGS_FOR_HOST CXXFLAGS_FOR_H \
+                                              OST LDFLAGS_FOR_HOST LDLIBS_FOR_HOST LIBS_FOR_HOST
+                                              export CC_FOR_BUILD CXX_FOR_BUILD CFLAGS_FOR_BUILD CXXFLAGS_FOR_BUILD LDFLAGS_FO \
+                                              R_BUILD LDLIBS_FOR_BUILS LIBS_FOR_BUILS'''
+ host_cflags:          'none'     'convert'   '-O2 -g -pipe'
+ host_cxxflags:        'none'     'convert'   '-O2 -g -pipe'
+ host_includes:        'none'     'convert'   ''
+ host_ldflags:         'none'     'convert'   ''
+ host_libs:            'none'     'convert'   ''
+ install_mode:         'none'     'none'      'installing'
+ name:                 'none'     'none'      ''
+ nil:                  'none'     'none'      ''
+ release:              'none'     'none'      ''
+ rsb_released:         'none'     'none'      '0'
+ rsb_version:          'none'     'none'      '6 (8e568b2ca348)'
+ rtems_makefile_inc:   'none'     'none'      '''export RTEMS_ROOT=%{rtems_bsp_rtems_root}
+                                              export PROJECT_RELEASE=%{rtems_bsp_prefix}
+                                              export RTEMS_MAKEFILE_PATH=%{rtems_bsp_prefix}
+ rtems_release_url:    'none'     'none'      'https://ftp.rtems.org/pub/rtems/releases/%{rtems_version}'
+ rtems_version:        'none'     'none'      '6'
+ stagingroot:          'dir'      'none'      '%{_tmppath}/sb-%{_uid}-staging'
+ version:              'none'     'none'      ''
+ waf_build_root_suffix: 'none'     'none'      ' %(echo %{_prefix} | cut -c 1-2)'
+_bset:  1: dtc: make
+Build Set: dtc
+Build Set: Time 0:00:00.000155
