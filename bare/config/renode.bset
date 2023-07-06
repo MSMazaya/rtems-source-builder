@@ -1,0 +1,9 @@
+#
+# Build set for Renode
+#
+
+%if %{release} == %{nil}
+    %define release 1
+%endif
+
+devel/renode-git-1
